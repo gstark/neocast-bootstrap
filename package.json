@@ -51,7 +51,8 @@
   },
   "files": [
     "dist",
-    "styles"
+    "styles",
+    "types"
   ],
   "dependencies": {
     "@babel/runtime": "^7.12.5",
