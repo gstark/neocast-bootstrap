@@ -8,6 +8,7 @@ import { DropdownMenu as _DropdownMenu } from './components/Bootstrap/DropdownMe
 import { DropdownToggle as _DropdownToggle } from './components/Bootstrap/DropdownToggle'
 import { UncontrolledDropdown as _UncontrolledDropdown } from './components/Bootstrap/UncontrolledDropdown'
 import { UncontrolledTooltip as _UncontrolledTooltip } from './components/Bootstrap/UncontrolledTooltip'
+import { Tooltip as _Tooltip } from './components/Bootstrap/Tooltip'
 
 export const Modal = _Modal
 export const Button = _Button
@@ -17,3 +18,4 @@ export const DropdownMenu = _DropdownMenu
 export const DropdownToggle = _DropdownToggle
 export const UncontrolledDropdown = _UncontrolledDropdown
 export const UncontrolledTooltip = _UncontrolledTooltip
+export const Tooltip = _Tooltip
