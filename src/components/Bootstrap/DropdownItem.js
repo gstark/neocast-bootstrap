@@ -24,7 +24,7 @@ const defaultProps = {
   toggle: true
 };
 
-class DropdownItem extends React.Component {
+export class DropdownItem extends React.Component {
   constructor(props) {
     super(props);
 
@@ -117,6 +117,4 @@ class DropdownItem extends React.Component {
 DropdownItem.propTypes = propTypes;
 DropdownItem.defaultProps = defaultProps;
 DropdownItem.contextType = DropdownContext;
-
-export default DropdownItem;
 
