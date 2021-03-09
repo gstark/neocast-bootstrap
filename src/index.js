@@ -4,6 +4,7 @@ import { Modal as _Modal } from './components/Bootstrap/Modal'
 import { Button as _Button } from './components/Bootstrap/Button'
 import { Collapse as _Collapse } from './components/Bootstrap/Collapse'
 import { Dropdown as _Dropdown } from './components/Bootstrap/Dropdown'
+import { DropdownContext as _DropdownContext } from './components/Bootstrap/DropdownContext'
 import { DropdownItem as _DropdownItem } from './components/Bootstrap/DropdownItem'
 import { DropdownMenu as _DropdownMenu } from './components/Bootstrap/DropdownMenu'
 import { DropdownToggle as _DropdownToggle } from './components/Bootstrap/DropdownToggle'
@@ -15,6 +16,7 @@ export const Modal = _Modal
 export const Button = _Button
 export const Collapse = _Collapse
 export const Dropdown = _Dropdown
+export const DropdownContext = _DropdownContext
 export const DropdownItem = _DropdownItem
 export const DropdownMenu = _DropdownMenu
 export const DropdownToggle = _DropdownToggle
