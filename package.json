@@ -57,6 +57,7 @@
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "@popperjs/core": "^2.0.0",
+    "caniuse-lite": "^1.0.30001265",
     "classnames": "^2.2.3",
     "prop-types": "^15.5.8",
     "react": "^17.0.1",
