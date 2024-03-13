@@ -60,6 +60,8 @@ export class Collapse extends Component {
     ;['onEntering', 'onEntered', 'onExit', 'onExiting', 'onExited'].forEach(name => {
       this[name] = this[name].bind(this)
     })
+
+    this.nodeRef = React.createRef()
   }
 
   onEntering(node, isAppearing) {
@@ -91,7 +93,6 @@ export class Collapse extends Component {
 
   render() {
     const { tag: Tag, isOpen, className, navbar, cssModule, children, innerRef, ...otherProps } = this.props
-    const nodeRef = React.useRef(null)
 
     const { height } = this.state
 
