@@ -32,21 +32,24 @@ const defaultProps = {
 
 function Fade(props) {
   const { tag: Tag, baseClass, baseClassActive, className, cssModule, children, innerRef, ...otherProps } = props
+  const nodeRef = React.useRef(null)
 
   const transitionProps = pick(otherProps, TransitionPropTypeKeys)
   const childProps = omit(otherProps, TransitionPropTypeKeys)
 
   return (
-    <Transition {...transitionProps}>
-      {status => {
-        const isActive = status === 'entered'
-        const classes = mapToCssModules(classNames(className, baseClass, isActive && baseClassActive), cssModule)
-        return (
-          <Tag className={classes} {...childProps} ref={innerRef}>
-            {children}
-          </Tag>
-        )
-      }}
+    <Transition {...transitionProps} nodeRef={nodeRef}>
+      <div ref={nodeRef}>
+        {status => {
+          const isActive = status === 'entered'
+          const classes = mapToCssModules(classNames(className, baseClass, isActive && baseClassActive), cssModule)
+          return (
+            <Tag className={classes} {...childProps} ref={innerRef}>
+              {children}
+            </Tag>
+          )
+        }}
+      </div>
     </Transition>
   )
 }
