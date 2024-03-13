@@ -107,9 +107,9 @@ export class Collapse extends Component {
         onExit={this.onExit}
         onExiting={this.onExiting}
         onExited={this.onExited}
-        nodeRef={nodeRef}
+        nodeRef={this.nodeRef}
       >
-        <div ref={nodeRef}>
+        <div ref={this.nodeRef}>
           {status => {
             let collapseClass = getTransitionClass(status)
             const classes = mapToCssModules(classNames(className, collapseClass, navbar && 'navbar-collapse'), cssModule)
