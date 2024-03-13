@@ -109,23 +109,23 @@ export class Collapse extends Component {
         onExited={this.onExited}
         nodeRef={this.nodeRef}
       >
-        <div ref={this.nodeRef}>
-          {status => {
-            let collapseClass = getTransitionClass(status)
-            const classes = mapToCssModules(classNames(className, collapseClass, navbar && 'navbar-collapse'), cssModule)
-            const style = height === null ? null : { height }
-            return (
-              <Tag
-                {...childProps}
-                style={{ ...childProps.style, ...style }}
-                className={classes}
-                ref={this.props.innerRef}
-              >
-                {children}
-              </Tag>
-            )
-          }}
-        </div>
+        {status => {
+          let collapseClass = getTransitionClass(status)
+          const classes = mapToCssModules(classNames(className, collapseClass, navbar && 'navbar-collapse'), cssModule)
+          const style = height === null ? null : { height }
+          return (
+            <div ref={this.nodeRef}>
+            <Tag
+              {...childProps}
+              style={{ ...childProps.style, ...style }}
+              className={classes}
+              ref={this.props.innerRef}
+            >
+              {children}
+            </Tag>
+            </div>
+          )
+        }}
       </Transition>
     )
   }

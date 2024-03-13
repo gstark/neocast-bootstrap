@@ -39,17 +39,17 @@ function Fade(props) {
 
   return (
     <Transition {...transitionProps} nodeRef={nodeRef}>
-      <div ref={nodeRef}>
-        {status => {
-          const isActive = status === 'entered'
-          const classes = mapToCssModules(classNames(className, baseClass, isActive && baseClassActive), cssModule)
-          return (
+      {status => {
+        const isActive = status === 'entered'
+        const classes = mapToCssModules(classNames(className, baseClass, isActive && baseClassActive), cssModule)
+        return (
+          <div ref={nodeRef}>
             <Tag className={classes} {...childProps} ref={innerRef}>
               {children}
             </Tag>
-          )
-        }}
-      </div>
+          </div>
+        )
+      }}
     </Transition>
   )
 }
