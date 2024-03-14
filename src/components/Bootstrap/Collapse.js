@@ -47,7 +47,7 @@ function getTransitionClass(status) {
 }
 
 function getHeight(node) {
-  return node.scrollHeight
+  return node ? node.scrollHeight : 0
 }
 
 export class Collapse extends Component {
